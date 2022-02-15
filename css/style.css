@@ -1,11 +1,16 @@
+:root{
+    --black:#000000;
+    --white:#FFFFFF;
+    --purple:#8D4DDD;
+}
 *{
     box-sizing: border-box;
     margin: 0;
 }
 html, body {
 	min-height: 100%;
-	background: cyan;
-	color: red;
+	background: var(--black);
+	color: var(--white);
 }
 body {
 	font-size: 1.4rem;
@@ -13,20 +18,21 @@ body {
 }
 h1{
     font-size: 6rem;
+    color: var(--purple);
 }
 .nav{
     background-color: lime;
 }
 .welcome,.about,.skills,.portfolio,.contact{
-    background-color: pink;
-    color: royalblue;
+    /* background-color: pink;
+    color: royalblue; */
     height: 100vh;
     margin: 0 5vw;
 }
 
 
 
-
+/* warp text on hover effect */
 .warp {
     animation-duration: 0.5s;
     animation-fill-mode: both;
@@ -35,8 +41,9 @@ h1{
   }
   
   .warp:hover {
-    color: rebeccapurple;
+    color: var(--white);
     animation-name: warpText;
+    cursor: pointer;
   }
   
   @keyframes warpText {

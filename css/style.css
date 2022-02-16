@@ -1,78 +1,69 @@
 :root{
-    --black:#000000;
-    --white:#FFFFFF;
-    --purple:#8D4DDD;
+  --black:#000000;
+  --white:#FFFFFF;
+  --purple:#8D4DDD;
 }
 *{
-    box-sizing: border-box;
-    margin: 0;
+  box-sizing: border-box;
+  margin: 0;
 }
 html, body {
-	min-height: 100%;
-	background: var(--black);
-	color: var(--white);
+min-height: 100%;
+/* background: var(--black);
+color: var(--white); */
 }
 body {
-	font-size: 1.4rem;
-	text-rendering: optimizeLegibility;
+font-size: 1.4rem;
+text-rendering: optimizeLegibility;
 }
 h1{
-    font-size: 6rem;
-    color: var(--purple);
+  font-size: 6rem;
+  color: var(--purple);
 }
 .nav{
-    background-color: lime;
+  background-color: lime;
 }
 .welcome,.about,.skills,.portfolio,.contact{
-    /* background-color: pink;
-    color: royalblue; */
-    height: 100vh;
-    margin: 0 5vw;
+  background-color: pink;
+  color: royalblue;
+  height: 100vh;
+  margin: 0 5vw;
 }
 
 
 
 /* warp text on hover effect */
 .warp {
-    animation-duration: 0.5s;
-    animation-fill-mode: both;
-    animation-iteration-count: infinite;
-    display: inline-block;
+  animation-duration: 0.5s;
+  animation-fill-mode: both;
+  animation-iteration-count: infinite;
+  display: inline-block;
+}
+.warp:hover {
+  color: var(--white);
+  animation-name: warpText;
+  cursor: pointer;
+}
+@keyframes warpText {
+  from {
+    transform: scale3d(1, 1, 1);
   }
-  
-  .warp:hover {
-    color: var(--white);
-    animation-name: warpText;
-    cursor: pointer;
+  30% {
+    transform: scale3d(1.25, 0.75, 1);
   }
-  
-  @keyframes warpText {
-    from {
-      transform: scale3d(1, 1, 1);
-    }
-  
-    30% {
-      transform: scale3d(1.25, 0.75, 1);
-    }
-  
-    40% {
-      transform: scale3d(0.75, 1.25, 1);
-    }
-  
-    50% {
-      transform: scale3d(1.15, 0.85, 1);
-    }
-  
-    65% {
-      transform: scale3d(.95, 1.05, 1);
-    }
-  
-    75% {
-      transform: scale3d(1.05, .95, 1);
-    }
-  
-    to {
-      transform: scale3d(1, 1, 1);
-    }
-  } 
-
+  40% {
+    transform: scale3d(0.75, 1.25, 1);
+  }
+  50% {
+    transform: scale3d(1.15, 0.85, 1);
+  }
+  65% {
+    transform: scale3d(.95, 1.05, 1);
+  }
+  75% {
+    transform: scale3d(1.05, .95, 1);
+  }
+  to {
+    transform: scale3d(1, 1, 1);
+  }
+} 
